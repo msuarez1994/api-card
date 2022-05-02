@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('api-card:server');
 var http = require('http');
+var env = require('dotenv').config();
 
 /**
  * Get port from environment and store in Express.
@@ -14,6 +15,8 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+console.log(`El servidor corre en el port: ${port}`);
 
 /**
  * Create HTTP server.
